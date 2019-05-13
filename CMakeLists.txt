@@ -5,6 +5,17 @@ project(bulk_server VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
 set(CMAKE_CXX_STANDARD 14)
 
 find_package(Threads)
+find_package(Boost)
+find_package(Boost COMPONENTS system REQUIRED)
+#find_package(Boost COMPONENTS asio REQUIRED)
+
+#set(BOOST_LIBRARYDIR "/usr/lib/x86_64-linux-gnu")
+#
+#set(Boost_USE_STATIC_LIBS ON) 
+#set(Boost_USE_MULTITHREADED ON)  
+#set(Boost_USE_STATIC_RUNTIME ON) 
+#find_package(Boost COMPONENTS system REQUIRED) 
+#
 
 add_executable(bulk_server bulk_server.cpp)
 
@@ -15,7 +26,8 @@ set_target_properties(bulk_server PROPERTIES
     # COMPILE_OPTIONS "-Wpedantic;-Wall;-Wextra;-fsanitize=thread"
 )
 
-target_link_librariesi(bulk_server
+target_link_libraries(bulk_server
+    ${Boost_LIBRARIES}
     ${CMAKE_THREAD_LIBS_INIT}
 )
 
