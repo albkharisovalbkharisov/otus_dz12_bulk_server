@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 14)
 
 find_package(Threads)
 find_package(Boost)
-find_package(Boost COMPONENTS system REQUIRED)
+#find_package(Boost COMPONENTS system REQUIRED)
 #find_package(Boost COMPONENTS asio REQUIRED)
 
 #set(BOOST_LIBRARYDIR "/usr/lib/x86_64-linux-gnu")
