@@ -6,3 +6,10 @@ Makefile
 cmake_install.cmake
 server
 build/
+.cache
+lib.*.so*
+cli_server
+async_cli
+libasync*
+libconnection*
+bulk16*.log

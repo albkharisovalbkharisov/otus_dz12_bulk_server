@@ -1,0 +1,22 @@
+[
+{
+  "directory": "/home/marvin/work/cpp/task6",
+  "command": "/usr/bin/c++ -DBOOST_ASIO_ENABLE_HANDLER_TRACKING -Dasync_EXPORTS  -fPIC -Wpedantic -Wall -Wextra -std=gnu++14 -o CMakeFiles/async.dir/async.cpp.o -c /home/marvin/work/cpp/task6/async.cpp",
+  "file": "/home/marvin/work/cpp/task6/async.cpp"
+},
+{
+  "directory": "/home/marvin/work/cpp/task6",
+  "command": "/usr/bin/c++ -DBOOST_ASIO_ENABLE_HANDLER_TRACKING -Dasync_EXPORTS  -fPIC -Wpedantic -Wall -Wextra -std=gnu++14 -o CMakeFiles/async.dir/bulkmt.cpp.o -c /home/marvin/work/cpp/task6/bulkmt.cpp",
+  "file": "/home/marvin/work/cpp/task6/bulkmt.cpp"
+},
+{
+  "directory": "/home/marvin/work/cpp/task6",
+  "command": "/usr/bin/c++ -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -Dconnection_EXPORTS -isystem /opt/boost_1.83/include -fPIC -Wpedantic -Wall -Wextra -std=gnu++14 -o CMakeFiles/connection.dir/connection.cpp.o -c /home/marvin/work/cpp/task6/connection.cpp",
+  "file": "/home/marvin/work/cpp/task6/connection.cpp"
+},
+{
+  "directory": "/home/marvin/work/cpp/task6",
+  "command": "/usr/bin/c++ -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -isystem /opt/boost_1.83/include  -o CMakeFiles/cli_server.dir/server.cpp.o -c /home/marvin/work/cpp/task6/server.cpp",
+  "file": "/home/marvin/work/cpp/task6/server.cpp"
+}
+]
