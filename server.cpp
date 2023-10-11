@@ -11,6 +11,14 @@
 namespace ba = boost::asio;
 using tcp = ba::ip::tcp;
 
+void handler(const boost::system::error_code& error, int signal_number)
+{
+    // automatically calls destructor of io_service ->
+    // so it stops connections ->
+    // so it calls async::disconnect()
+    exit(1);
+}
+
 int main(int argc, char* argv[])
 {
     if (argc != 3) {
@@ -23,6 +31,9 @@ int main(int argc, char* argv[])
 
     ba::io_service io_service;
     Connector con(io_service, tcp::endpoint{ba::ip::tcp::v4(), port_num});
+    boost::asio::signal_set signals(io_service, SIGINT, SIGTERM );
+    signals.async_wait( handler );
+
     io_service.run();
 
     return 0;
