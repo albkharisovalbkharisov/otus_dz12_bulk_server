@@ -10,7 +10,7 @@ void Connector::do_accept()
     acceptor.async_accept(sock,
             [this] (const error_code& ec) {
                 if (!ec) {
-                        std::make_shared<Session>(std::move(sock))->start();
+                        std::make_shared<Session>(std::move(sock))->start(async_bulk_handle);
                         do_accept();
                 } else {
                     std::cerr << "Connector: error: Close() " << std::endl;
@@ -26,7 +26,6 @@ void Session::do_read() {
                     async::receive(async_bulk_handle, readbuf.data(), bytes_transferred);
                     do_read();
                 } else {
-                    async::disconnect(async_bulk_handle);
                     s.close();
                 }
             });
